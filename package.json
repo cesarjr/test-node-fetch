@@ -1,0 +1,21 @@
+{
+  "name": "test-node-fetch",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.14.2"
+  },
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "fetch-mock": "^7.2.8",
+    "jest": "^23.6.0"
+  }
+}

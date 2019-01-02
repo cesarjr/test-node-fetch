@@ -1,10 +1,13 @@
-const fetch = require('node-fetch');
 const MyClass = require('./myclass');
+
+const fetchMock = require('fetch-mock').sandbox();
+const nodeFetch = require('node-fetch');
+nodeFetch.default = fetchMock;
 
 describe('MyClass', () => {
   describe('.query', () => {
     it('returns the response', () => {
-      fetch.mock('*', {'result': {'fulfillment': {'speech': 'The answer'}}});
+      fetchMock.mock('*', {'result': {'fulfillment': {'speech': 'The answer'}}});
 
       expect.assertions(1);
 
